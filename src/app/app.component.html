@@ -1,2 +1,7 @@
-<button (click)="showModal()">Abrir modal</button>
+<button (click)="showModalWithTemplate(tmpl)">Abrir modal com template</button>
+<button (click)="showModalWithComponent()">Abrir modal com componente</button>
 <router-outlet></router-outlet>
+
+<ng-template #tmpl>
+  <h1>Olá, mundo</h1>
+</ng-template>

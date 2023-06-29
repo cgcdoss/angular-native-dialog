@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, TemplateRef, inject } from '@angular/core';
 import { ModalService } from './services/modal-service.service';
 import { ModalTesteComponent } from './components/modal-teste/modal-teste.component';
 
@@ -11,7 +11,11 @@ export class AppComponent {
 
   private _modalService = inject(ModalService);
 
-  public showModal(): void {
+  public showModalWithTemplate(template: TemplateRef<any>): void {
+    this._modalService.show(template);
+  }
+
+  public showModalWithComponent(): void {
     this._modalService.show(ModalTesteComponent);
   }
 
