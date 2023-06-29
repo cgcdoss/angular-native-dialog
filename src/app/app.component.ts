@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ModalService } from './services/modal-service.service';
+import { ModalTesteComponent } from './components/modal-teste/modal-teste.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-native-dialog';
+
+  private _modalService = inject(ModalService);
+
+  public showModal(): void {
+    this._modalService.show(ModalTesteComponent);
+  }
+
 }
