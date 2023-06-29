@@ -1,5 +1,8 @@
 # AngularNativeDialog
 
+## Criando modais dinamicamente
+Passando o componente do modal como referência para o showModal()
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.2.
 
 ## Development server
